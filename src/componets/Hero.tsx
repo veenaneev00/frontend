@@ -86,7 +86,7 @@ const Hero = () => {
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z" fill="currentColor"/>
             </svg>
-            <span>SKITBIT</span>
+            <span>RENDERDAC</span>
           </div>
 
           <h1 className="hero-title">
