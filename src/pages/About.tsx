@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import '../../assets/css/sections/about.css';
+import '../assets/css/sections/about.css';
 
 const Header = lazy(() => import('../componets/Header'));
 // const Footer = lazy(() => import('../components/Footer'));
@@ -8,49 +8,49 @@ const About = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-1.jpg',
     },
     {
       id: 2,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-2.jpg',
     },
     {
       id: 3,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-3.jpg',
     },
     {
       id: 4,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-4.jpg',
     },
     {
       id: 5,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-5.jpg',
     },
     {
       id: 6,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-6.jpg',
     },
     {
       id: 7,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-7.jpg',
     },
     {
       id: 8,
-      name: 'Arnav Gupta',
+      name: 'John doe',
       role: 'Founder & Creative Director',
       image: '/images/team-8.jpg',
     },

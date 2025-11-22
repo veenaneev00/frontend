@@ -1,46 +1,25 @@
-// src/App.tsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import './App.css';
 
-// Lazy load sections
-const Header = lazy(() => import('./componets/Header'));
-const Hero = lazy(() => import('./componets/Hero'));
-const Projects = lazy(() => import('./componets/Projects'));
-// const About = lazy(() => import('./components/About'));
-// const Services = lazy(() => import('./components/Services'));
-// const Contact = lazy(() => import('./components/Contact'));
-// const Footer = lazy(() => import('./components/Footer'));
+// Lazy load pages
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ProjectDetails = lazy(() => import('./pages/ProjectDetails'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
   return (
-    <>
-      <Suspense fallback={<div className="loading">Loading...</div>}>
-        <Header />
+    <Router>
+      <Suspense fallback={<div className="page-loading">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </Suspense>
-      
-      <Suspense fallback={<div className="section-loading" />}>
-        <Hero />
-      </Suspense>
-
-      <Suspense fallback={<div className="section-loading" />}>
-        <Projects />  {/* Add this */}
-      </Suspense>
-      
-      {/*<Suspense fallback={<div className="section-loading" />}>
-        <About />
-      </Suspense>
-      
-      <Suspense fallback={<div className="section-loading" />}>
-        <Services />
-      </Suspense>
-      
-      <Suspense fallback={<div className="section-loading" />}>
-        <Contact />
-      </Suspense>
-      
-      <Suspense fallback={<div className="section-loading" />}>
-        <Footer />
-      </Suspense> */}
-    </>
+    </Router>
   );
 }
 

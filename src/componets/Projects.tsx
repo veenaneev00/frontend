@@ -71,8 +71,8 @@ const Projects = () => {
     <section className="projects">
       <div className="projects-container">
         {/* Section Header */}
-        <div className="projects-header">
-          <h2 className="projects-title">PORTFOLIO ARCHIVE</h2>
+        <div className="pricing-header">
+            <h2 className="pricing-title">Our Projects.</h2>
         </div>
 
         {/* Regular Grid */}

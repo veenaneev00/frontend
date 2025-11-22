@@ -1,0 +1,255 @@
+/* ========================================
+   PROJECT DETAIL PAGE
+   ======================================== */
+
+.project-detail {
+  min-height: 100vh;
+  background: #000000;
+  color: var(--color-text-primary);
+}
+
+/* Project Hero Section */
+.project-hero {
+  padding: 10rem 2rem 4rem;
+  background: #000000;
+}
+
+.project-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-detail-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Project Meta */
+.project-meta {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.meta-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.meta-value {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.project-description {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* Video Section */
+.project-video-section {
+  padding: 4rem 2rem;
+  background: #000000;
+}
+
+.project-video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.project-video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  background: #0a0a0a;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.project-video:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 4px;
+}
+
+/* Image Gallery */
+.project-gallery {
+  padding: 4rem 2rem;
+  background: #000000;
+}
+
+.project-gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0a0a0a;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: grayscale(70%) contrast(1.15);
+}
+
+/* Not Found */
+.project-not-found {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.not-found-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 6rem);
+  padding: 2rem;
+  text-align: center;
+}
+
+.not-found-content h1 {
+  font-size: 3rem;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+.not-found-content a {
+  padding: 1rem 2rem;
+  background-color: #c4f72e;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.not-found-content a:hover {
+  background-color: #b3e626;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (1024px)
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .project-detail-title {
+    font-size: 3rem;
+  }
+
+  .project-meta {
+    gap: 2rem;
+  }
+
+  .gallery-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE (768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .project-hero {
+    padding: 8rem 1.5rem 3rem;
+  }
+
+  .project-detail-title {
+    font-size: 2.5rem;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-video-section {
+    padding: 3rem 1rem;
+  }
+
+  .project-video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .project-gallery {
+    padding: 3rem 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - SMALL MOBILE (480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  .project-detail-title {
+    font-size: 2rem;
+  }
+
+  .project-meta-item {
+    font-size: 0.875rem;
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+  }
+
+  .gallery-grid {
+    gap: 1rem;
+  }
+}

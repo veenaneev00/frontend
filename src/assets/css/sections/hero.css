@@ -56,7 +56,7 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.15;
   color: var(--color-text-primary);
@@ -70,26 +70,53 @@
 }
 
 .hero-cta {
-  display: inline-block;
-  padding: 0.875rem 2.5rem;
-  background-color: #3700ff;
-  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: #ffffff;            
+  color: #000000;                
   font-size: 1rem;
   font-weight: 600;
+  border: none;
   border-radius: 50px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta span {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cta-icon {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
 }
 
 .hero-cta:hover {
-  background-color: #252525;
+  background-color: #e5e5e5;
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(42, 43, 41, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.hero-cta:hover .hero-cta-icon {
+  transform: translateY(-2px);
+}
+
+/* Active/Click State */
+.hero-cta:active {
+  transform: translateY(0);
+  background: #d4d4d4;
 }
 
 .hero-cta:focus-visible {
-  outline: 2px solid #910000;
-  outline-offset: 4px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* Hero Cards Grid - Larger Cards */

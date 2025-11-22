@@ -89,13 +89,15 @@ const Hero = () => {
             <span>RENDERDAC</span>
           </div>
 
-          <h1 className="hero-title">
-            HIGH-IMPACT
+{/* 3D Art, Product Design, Animation, Visualization. Turn your idea into reality. */}
+
+          <h6 className="hero-title">
+            3D Art, Product Design, Animation, Visualization.
             <br />
-            <span className="hero-title-highlight">3D ANIMATION</span>
-            <br />
-            FOR BRANDS
-          </h1>
+            {/* <span className="hero-title-highlight">3D ANIMATION</span> */}
+            {/* <br /> */}
+            Turn your idea into reality.
+          </h6>
 
           <a href="#contact" className="hero-cta">
             Chat With Us

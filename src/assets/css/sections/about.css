@@ -1,0 +1,321 @@
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+
+.about-page {
+  min-height: 100vh;
+  background: #000000;
+}
+
+.about-section {
+  padding: 8rem 2rem 4rem;
+  min-height: calc(100vh - 6rem);
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Page Title */
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4rem;
+  letter-spacing: -0.02em;
+}
+
+/* Our Story Section */
+.about-story {
+  display: grid;
+  grid-template-columns: 400px 1fr 350px;
+  gap: 3rem;
+  margin-bottom: 6rem;
+  align-items: start;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.story-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.story-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.story-text p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* Story Image */
+.story-image {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+/* Quote Section */
+.story-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.quote-text {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.quote-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.author-role {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.author-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-link {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--color-text-primary);
+}
+
+/* Team Section */
+.about-team {
+  margin-top: 6rem;
+}
+
+.team-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.team-member-image {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0a0a0a;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-member-image {
+  transform: translateY(-4px);
+}
+
+.team-member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+.team-member:hover .team-member-image img {
+  filter: grayscale(80%) contrast(1.15);
+}
+
+.team-member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.team-member-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.team-member-role {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* ========================================
+   RESPONSIVE - LARGE TABLET (1200px)
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .story-image {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .story-quote {
+    max-width: 600px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (1024px)
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE (768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-story {
+    gap: 2.5rem;
+  }
+
+  .story-heading {
+    font-size: 1.25rem;
+  }
+
+  .story-text p {
+    font-size: 0.875rem;
+  }
+
+  .story-image {
+    aspect-ratio: 3 / 4;
+  }
+
+  .quote-text {
+    font-size: 0.875rem;
+  }
+
+  .about-team {
+    margin-top: 4rem;
+  }
+
+  .team-heading {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .team-member-image {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - SMALL MOBILE (480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-story {
+    gap: 2rem;
+  }
+
+  .story-text p,
+  .quote-text {
+    font-size: 0.8125rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .team-member-image {
+    aspect-ratio: 9 / 16;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .team-member-info {
+    text-align: center;
+  }
+}

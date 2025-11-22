@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';  // ← Add this import
 import '../assets/css/sections/header.css';
 
 const Header = () => {
@@ -21,12 +22,12 @@ const Header = () => {
       <header className="header">
         <div className="header-container">
           {/* Logo */}
-          <a href="/" className="header-logo">
+          <Link to="/" className="header-logo">  {/* ← Changed from <a href="/"> */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z" fill="currentColor"/>
             </svg>
-            <span>RenderDac</span>
-          </a>
+            <span>Skitbit</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="header-nav">
@@ -95,19 +96,19 @@ const Header = () => {
             </div>
             
             <a href="#pricing" className="nav-link">Pricing</a>
-            <a href="#faq" className="nav-link">FAQ</a>
-            <a href="#blog" className="nav-link">Blog</a>
-            <a href="#about" className="nav-link">About</a>
+            <a href="#faq" className="nav-link">FAQ</a>  {/* ← Changed */}
+            <Link to="/blog" className="nav-link">Blog</Link>  {/* ← Changed */}
+            <Link to="/about" className="nav-link">About</Link>  {/* ← Changed */}
           </nav>
 
           {/* CTA Button */}
-          <a href="#contact" className="header-cta">
+          <Link to="/contact" className="header-cta">  {/* ← Changed from <a href="#contact"> */}
             Chat With Us
-          </a>
+          </Link>
         </div>
       </header>
 
-      {/* Mobile Menu Toggle Button - OUTSIDE header-container */}
+      {/* Mobile Menu Toggle Button */}
       <button 
         className={`mobile-menu-toggle ${isSidebarOpen ? 'menu-toggle-active' : ''}`}
         onClick={toggleSidebar}
@@ -177,34 +178,34 @@ const Header = () => {
             <span>Pricing</span>
           </a>
 
-          <a href="#faq" className="sidebar-link" onClick={toggleSidebar}>
+          <Link to="/faq" className="sidebar-link" onClick={toggleSidebar}>  {/* ← Changed */}
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5"/>
               <path d="M10 14v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
             <span>FAQ</span>
-          </a>
+          </Link>
 
-          <a href="#blog" className="sidebar-link" onClick={toggleSidebar}>
+          <Link to="/blog" className="sidebar-link" onClick={toggleSidebar}>  {/* ← Changed */}
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/>
               <path d="M7 7h6M7 10h6M7 13h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
             <span>Blog</span>
-          </a>
+          </Link>
 
-          <a href="#about" className="sidebar-link" onClick={toggleSidebar}>
+          <Link to="/about" className="sidebar-link" onClick={toggleSidebar}>  {/* ← Changed */}
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5"/>
               <path d="M10 10v4M10 7v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
             <span>About</span>
-          </a>
+          </Link>
         </nav>
 
-        <a href="#contact" className="sidebar-cta" onClick={toggleSidebar}>
+        <Link to="/contact" className="sidebar-cta" onClick={toggleSidebar}>  {/* ← Changed */}
           Get a Quote
-        </a>
+        </Link>
       </aside>
     </>
   );
