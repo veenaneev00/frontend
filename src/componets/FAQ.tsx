@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../assets/css/sections/faq.css';
+import '../../assets/css/sections/faq.css';
 
 interface FAQItem {
   id: number;
@@ -9,7 +9,7 @@ interface FAQItem {
 }
 
 const FAQ = () => {
-  const [openId, setOpenId] = useState<number | null>(1); // First item open by default
+  const [openId, setOpenId] = useState<number | null>(1);
 
   const faqs: FAQItem[] = [
     {
@@ -34,17 +34,15 @@ const FAQ = () => {
       id: 4,
       question: 'How do you price your services?',
       answer:
-        'Pricing is based on animation length, complexity, number of renders, and modeling requirements. You can view our detailed pricing on our ',
-      links: [{ text: 'pricing page', url: '/pricing' }],
+        'Pricing is based on animation length, complexity, number of renders, and modeling requirements. You can view our detailed pricing on our pricing page.',
+      links: [{ text: 'pricing page', url: '#pricing' }],
     },
     {
       id: 5,
       question: 'Can we request changes after delivery?',
       answer:
-        'Yes. All revisions are covered under our ',
+        'Yes. All revisions are covered under our revision policy, which ensures smooth updates without unexpected scope creep.',
       links: [{ text: 'revision policy', url: '/revision-policy' }],
-      answer:
-        ', which ensures smooth updates without unexpected scope creep.',
     },
     {
       id: 6,
@@ -73,10 +71,9 @@ const FAQ = () => {
     {
       id: 10,
       question: 'How do we get started?',
-      answer: 'Simply ',
-      links: [{ text: 'contact us', url: '/contact' }],
       answer:
-        " with your project details, references, and timeline. We'll provide a proposal and next steps.",
+        "Simply contact us with your project details, references, and timeline. We'll provide a proposal and next steps.",
+      links: [{ text: 'contact us', url: '#contact' }],
     },
   ];
 
@@ -85,12 +82,14 @@ const FAQ = () => {
   };
 
   const renderAnswer = (faq: FAQItem) => {
-    if (!faq.links) {
+    if (!faq.links || faq.links.length === 0) {
       return <p className="faq-answer-text">{faq.answer}</p>;
     }
 
-    // Split answer and insert links
-    const parts = faq.answer.split(/(pricing page|revision policy|contact us)/g);
+    const linkTexts = faq.links.map(l => l.text).join('|');
+    const regex = new RegExp(`(${linkTexts})`, 'g');
+    const parts = faq.answer.split(regex);
+    
     return (
       <p className="faq-answer-text">
         {parts.map((part, index) => {
@@ -111,7 +110,6 @@ const FAQ = () => {
   return (
     <section className="faq-section" id="faq">
       <div className="faq-container">
-        {/* Header */}
         <div className="faq-header">
           <h2 className="faq-title">Frequently Asked Questions</h2>
           <p className="faq-subtitle">
@@ -119,7 +117,6 @@ const FAQ = () => {
           </p>
         </div>
 
-        {/* FAQ List */}
         <div className="faq-list">
           {faqs.map((faq) => (
             <div
