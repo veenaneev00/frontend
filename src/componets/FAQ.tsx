@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../../assets/css/sections/faq.css';
+import '../assets/css/sections/faq.css';
 
 interface FAQItem {
   id: number;
