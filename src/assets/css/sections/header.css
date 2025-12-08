@@ -90,6 +90,27 @@
   border-radius: 2px;
 }
 
+/* Make button nav links look like regular links */
+.nav-link[style] {
+  background: none !important;
+  border: none !important;
+  padding: 0.5rem 0 !important;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+}
+
+.nav-link[style]:hover {
+  color: var(--color-text-secondary);
+}
+
+/* Sidebar button links */
+.sidebar-link[style] {
+  background: none !important;
+  border: none !important;
+  text-align: left;
+}
+
 .nav-item-dropdown {
   position: relative;
 }

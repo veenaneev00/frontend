@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../assets/css/sections/project-detail.css";
 
@@ -18,6 +18,11 @@ interface ProjectData {
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
+
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Project data
   const projects: { [key: string]: ProjectData } = {

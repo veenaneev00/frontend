@@ -1,10 +1,16 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import '../assets/css/sections/contact.css';
 
 const Header = lazy(() => import('../componets/Header'));
 // const Footer = lazy(() => import('../components/Footer'));
 
 const Contact = () => {
+
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
