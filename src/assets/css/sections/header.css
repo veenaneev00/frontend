@@ -117,7 +117,7 @@
 
 .dropdown-icon {
   margin-left: 0.25rem;
-  transition: transform 0.2s;
+  transition: transform 0.25s ease;
 }
 
 .nav-item-dropdown:hover .dropdown-icon {
@@ -376,6 +376,21 @@
   height: 20px;
 }
 
+.sidebar-submenu-link svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.sidebar-link svg,
+.sidebar-submenu-link svg {
+  opacity: 0.85;
+}
+
+.sidebar-link:hover svg {
+  opacity: 1;
+}
+
 .sidebar-link span {
   flex: 1;
 }
@@ -404,7 +419,9 @@
 }
 
 .sidebar-submenu-link {
-  display: block;
+  display: flex;              /* ← change */
+  align-items: center;        /* ← add */
+  gap: 0.75rem;               /* ← add */
   padding: 0.75rem 0 0.75rem 2.5rem;
   color: var(--color-text-secondary);
   font-size: 0.9375rem;

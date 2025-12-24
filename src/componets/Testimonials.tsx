@@ -4,7 +4,7 @@ import '../assets/css/sections/testimonials.css';
 interface Testimonial {
   id: number;
   video: string;
-  poster: string;
+  // poster: string;
   clientName: string;
   clientTitle: string;
   company: string;
@@ -20,44 +20,44 @@ const Testimonials = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      video: '/videos/card-conversions.mp4',
-      poster: '/images/team-1.jpg',
+      video: '/videos/Testimonial/Testimonial-1.mp4',
+      // poster: '/images/team-1.jpg',
       clientName: 'John Doe',
       clientTitle: 'CEO',
       company: 'Tech Corp',
     },
-    {
-      id: 2,
-      video: '/videos/card-premium.mp4',
-      poster: '/images/team-2.jpg',
-      clientName: 'Jane Smith',
-      clientTitle: 'Marketing Director',
-      company: 'Brand Co',
-    },
-    {
-      id: 3,
-      video: '/videos/card-social.mp4',
-      poster: '/images/team-3.jpg',
-      clientName: 'Mike Johnson',
-      clientTitle: 'Product Manager',
-      company: 'Innovation Ltd',
-    },
-    {
-      id: 4,
-      video: '/videos/card-speed.mp4',
-      poster: '/images/team-4.jpg',
-      clientName: 'Sarah Williams',
-      clientTitle: 'Creative Director',
-      company: 'Design Studio',
-    },
-    {
-      id: 5,
-      video: '/videos/card-standout.mp4',
-      poster: '/images/team-5.jpg',
-      clientName: 'David Brown',
-      clientTitle: 'Founder',
-      company: 'Startup Inc',
-    },
+    // {
+    //   id: 2,
+    //   video: '/videos/card-premium.mp4',
+    //   // poster: '/images/team-2.jpg',
+    //   clientName: 'Jane Smith',
+    //   clientTitle: 'Marketing Director',
+    //   company: 'Brand Co',
+    // },
+    // {
+    //   id: 3,
+    //   video: '/videos/card-social.mp4',
+    //   // poster: '/images/team-3.jpg',
+    //   clientName: 'Mike Johnson',
+    //   clientTitle: 'Product Manager',
+    //   company: 'Innovation Ltd',
+    // },
+    // {
+    //   id: 4,
+    //   video: '/videos/card-speed.mp4',
+    //   // poster: '/images/team-4.jpg',
+    //   clientName: 'Sarah Williams',
+    //   clientTitle: 'Creative Director',
+    //   company: 'Design Studio',
+    // },
+    // {
+    //   id: 5,
+    //   video: '/videos/card-standout.mp4',
+    //   // poster: '/images/team-5.jpg',
+    //   clientName: 'David Brown',
+    //   clientTitle: 'Founder',
+    //   company: 'Startup Inc',
+    // },
   ];
 
   const setVideoRef = useCallback((id: number) => {
@@ -155,7 +155,7 @@ const Testimonials = () => {
                   <video
                     ref={setVideoRef(testimonial.id)}
                     className="testimonial-video"
-                    poster={testimonial.poster}
+                    // poster={testimonial.poster}
                     loop
                     playsInline
                   >

@@ -63,7 +63,7 @@
 /* Story Image */
 .story-image {
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 4 / 5.5;
   border-radius: 12px;
   overflow: hidden;
   background: #0a0a0a;
@@ -150,7 +150,7 @@
 
 .team-member-image {
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
   background: #0a0a0a;

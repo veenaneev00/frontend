@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect } from 'react';
 import '../assets/css/sections/about.css';
 
 const Header = lazy(() => import('../componets/Header'));
-// const Footer = lazy(() => import('../components/Footer'));
+const Footer = lazy(() => import('../componets/Footer'));
 
 const About = () => {
 
@@ -35,30 +35,30 @@ const About = () => {
       role: 'Founder & Creative Director',
       image: '/images/team-4.jpg',
     },
-    {
-      id: 5,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-5.jpg',
-    },
-    {
-      id: 6,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-6.jpg',
-    },
-    {
-      id: 7,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-7.jpg',
-    },
-    {
-      id: 8,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-8.jpg',
-    },
+    // {
+    //   id: 5,
+    //   name: 'John doe',
+    //   role: 'Founder & Creative Director',
+    //   image: '/images/team-5.jpg',
+    // },
+    // {
+    //   id: 6,
+    //   name: 'John doe',
+    //   role: 'Founder & Creative Director',
+    //   image: '/images/team-6.jpg',
+    // },
+    // {
+    //   id: 7,
+    //   name: 'John doe',
+    //   role: 'Founder & Creative Director',
+    //   image: '/images/team-7.jpg',
+    // },
+    // {
+    //   id: 8,
+    //   name: 'John doe',
+    //   role: 'Founder & Creative Director',
+    //   image: '/images/team-8.jpg',
+    // },
   ];
 
   return (
@@ -71,7 +71,7 @@ const About = () => {
       <section className="about-section">
         <div className="about-container">
           {/* Page Title */}
-          <h1 className="about-title">About Us</h1>
+          {/* <h1 className="about-title">About Us</h1> */}
 
           {/* Our Story */}
           <div className="about-story">
@@ -139,10 +139,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* Uncomment when Footer is ready */}
-      {/* <Suspense fallback={<div className="section-loading" />}>
+      <Suspense fallback={<div className="section-loading" />}>
         <Footer />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/sections/pricing.css";
 
 interface PricingPlan {
@@ -306,7 +307,7 @@ const Pricing = () => {
 
           {/* Contact Button */}
           <div className="pricing-footer">
-            <button className="pricing-contact-btn">Contact now</button>
+            <Link to="/contact" className="pricing-contact-btn">Contact Now</Link>
           </div>
         </div>
       </section>

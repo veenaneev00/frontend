@@ -124,13 +124,13 @@
 
 /* Links in Answers */
 .faq-link {
-  color: #c4f72e;
+  color: #ffffff;
   text-decoration: underline;
   transition: color 0.2s ease;
 }
 
 .faq-link:hover {
-  color: #b3e626;
+  color: #474747;
 }
 
 /* ========================================

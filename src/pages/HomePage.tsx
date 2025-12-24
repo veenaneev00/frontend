@@ -6,7 +6,7 @@ const Hero = lazy(() => import('../componets/Hero'));
 const Pricing = lazy(() => import('../componets/Pricing'));
 const Testimonials = lazy(() => import('../componets/Testimonials'));
 const FAQ = lazy(() => import('../componets/FAQ'));
-// const Footer = lazy(() => import('../components/Footer'));
+const Footer = lazy(() => import('../componets/Footer'));
 
 const HomePage = () => {
   return (
@@ -35,10 +35,9 @@ const HomePage = () => {
         <FAQ />
       </Suspense>
 
-      {/* Uncomment when Footer is ready */}
-      {/* <Suspense fallback={<div className="section-loading" />}>
+      <Suspense fallback={<div className="section-loading" />}>
         <Footer />
-      </Suspense> */}
+      </Suspense>
     </>
   );
 };

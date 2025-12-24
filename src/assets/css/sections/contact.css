@@ -259,24 +259,30 @@
 
 /* Textarea */
 .form-textarea {
+  width: 100%;
   padding: 0.875rem 0;
+  background: transparent;
   border: none;
   border-bottom: 1px solid #e5e7eb;
-  font-size: 1rem;
   color: #111827;
-  background: transparent;
-  outline: none;
-  resize: vertical;
+  font-size: 0.9375rem;
   font-family: inherit;
-  transition: border-color 0.3s ease;
-}
-
-.form-textarea:focus {
-  border-bottom-color: #000000;
+  resize: vertical;
+  min-height: 100px;
+  outline: none;
+  transition: border-color 0.2s ease;
 }
 
 .form-textarea::placeholder {
-  color: #9ca3af;
+  color: rgba(107, 114, 128, 0.5);
+}
+
+.form-textarea:focus {
+  border-bottom-color: #111827;
+}
+
+.form-textarea.form-input-error {
+  border-bottom-color: #ef4444;
 }
 
 /* Submit Button */
@@ -306,6 +312,197 @@
 
 .submit-button:active {
   transform: translateY(0);
+}
+
+/* ========================================
+   FORM VALIDATION STYLES
+   ======================================== */
+
+/* Error Input */
+.form-input-error,
+.form-textarea.form-input-error {
+  border-bottom-color: #ef4444;
+}
+
+.form-input-error:focus,
+.form-textarea.form-input-error:focus {
+  border-bottom-color: #dc2626;
+}
+
+/* Error Message */
+.form-error {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: #ef4444;
+  line-height: 1.4;
+}
+
+/* Character Count */
+.form-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: rgba(107, 114, 128, 0.7);
+  font-weight: 400;
+}
+
+/* Form Messages (Success/Error) */
+.form-message {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-message svg {
+  flex-shrink: 0;
+}
+
+.form-message-success {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+.form-message-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+/* Button Loading State */
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #6b7280;
+}
+
+.button-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus States for Accessibility */
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .form-error {
+    font-size: 0.75rem;
+  }
+
+  .form-message {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   PHONE INPUT WITH COUNTRY CODE
+   ======================================== */
+
+/* Phone Input Group */
+.phone-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Country Code Select */
+.country-code-select {
+  width: 110px;
+  padding: 0.875rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.country-code-select:focus {
+  border-bottom-color: #111827;
+}
+
+/* Phone Input */
+.phone-input {
+  flex: 1;
+}
+
+/* Phone Digit Counter */
+.phone-digit-counter {
+  font-size: 0.75rem;
+  color: rgba(107, 114, 128, 0.7);
+  font-weight: 400;
+  margin-left: auto;
+}
+
+/* Update form-label to support counter */
+.form-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .phone-input-group {
+    flex-direction: row;
+  }
+
+  .country-code-select {
+    width: 90px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .country-code-select {
+    width: 80px;
+    padding: 0.75rem 0.5rem;
+  }
 }
 
 /* ========================================

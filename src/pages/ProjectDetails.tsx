@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "../assets/css/sections/project-detail.css";
 
 const Header = lazy(() => import("../componets/Header"));
-// const Footer = lazy(() => import('../components/Footer'));
+const Footer = lazy(() => import('../componets/Footer'));
 
 interface ProjectData {
   id: number;
@@ -252,10 +252,9 @@ const ProjectDetails = () => {
         </section>
       )}
 
-      {/* Uncomment when Footer is ready */}
-      {/* <Suspense fallback={<div className="section-loading" />}>
+      <Suspense fallback={<div className="section-loading" />}>
         <Footer />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 };

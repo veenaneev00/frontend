@@ -73,7 +73,7 @@ const FAQ = () => {
       question: 'How do we get started?',
       answer:
         "Simply contact us with your project details, references, and timeline. We'll provide a proposal and next steps.",
-      links: [{ text: 'contact us', url: '#contact' }],
+      links: [{ text: 'contact us', url: '/contact' }],
     },
   ];
 
