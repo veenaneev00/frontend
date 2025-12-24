@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../assets/css/sections/footer.css";
 import { Phone, Mail, MapPin } from "lucide-react";
