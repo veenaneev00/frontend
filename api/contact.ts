@@ -28,7 +28,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Send email
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: 'renderdacbusiness1@gmail.com', // Where form submissions go
+      to: 'veenaneev00@gmail.com', // Where form submissions go
       replyTo: email, // User's email for easy reply
       subject: `New Contact Form: ${subject}`,
       html: `
