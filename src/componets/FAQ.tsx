@@ -14,66 +14,63 @@ const FAQ = () => {
   const faqs: FAQItem[] = [
     {
       id: 1,
-      question: 'What types of products can you animate or render?',
+      question: 'What is 3D product animation and how can it help my business?',
       answer:
-        'We can create photorealistic 3D animations and renders for almost any product — from beauty and skincare to electronics, furniture, and luxury goods. If it exists (or is planned), we can bring it to life.',
+        '3D product animation is a realistic visual representation of your product in motion. It helps explain features, highlight details that are hard to show in photos, and increases engagement, conversions, and brand perception—especially for ads, websites, and social media.',
     },
     {
       id: 2,
-      question: 'How long does a typical 3D animation take?',
+      question: 'What types of products do you specialize in?',
       answer:
-        'Timelines vary depending on complexity, but a standard 15–20 second animation usually takes 7–14 working days after final concept approval.',
+        'We specialize in consumer products, electronics, cosmetics, packaging, FMCG items, industrial products, and luxury goods. If you have a physical or conceptual product, we can visualize it realistically—even before manufacturing.',
     },
     {
       id: 3,
-      question: 'Do you work with existing CAD files or need product samples?',
+      question: 'What do you need from me to get started?',
       answer:
-        'We can work with both. If you have CAD or 3D models, we can import and refine them. If not, we can create models from physical product samples or detailed reference images.',
+        'To begin, we typically need: Product images, sketches, or CAD files, Dimensions or scale references, Brand guidelines (if available), A brief describing the goal, style, and platform usage. If you don’t have everything, we’ll guide you through the process.',
     },
     {
       id: 4,
-      question: 'How do you price your services?',
+      question: 'How realistic will the final render or animation be?',
       answer:
-        'Pricing is based on animation length, complexity, number of renders, and modeling requirements. You can view our detailed pricing on our pricing page.',
-      links: [{ text: 'pricing page', url: '#pricing' }],
+        'Our goal is photo-realism. We focus heavily on accurate materials, lighting, textures, and reflections so the final visuals look indistinguishable from real photography—often even better.',
     },
     {
       id: 5,
-      question: 'Can we request changes after delivery?',
+      question: 'How long does a 3D product animation or render take?',
       answer:
-        'Yes. All revisions are covered under our revision policy, which ensures smooth updates without unexpected scope creep.',
-      links: [{ text: 'revision policy', url: '/revision-policy' }],
+        'Timelines depend on complexity: Still renders: 2–5 days, Short animations (5–10 sec): 7–14 days, Advanced or luxury animations: 2–4 weeks. We always provide a clear timeline before starting.',
     },
     {
       id: 6,
-      question: "Will the renders match our brand's visual style?",
+      question: "Can you work with products that are not manufactured yet?",
       answer:
-        "Absolutely. We customize lighting, materials, camera angles, and animation pacing to fit your brand's identity and marketing needs.",
+        "Yes. Many of our clients use 3D visuals before production for marketing, pitching, or pre-launch campaigns. As long as we have dimensions or references, we can create accurate visuals.",
     },
     {
       id: 7,
-      question: 'What formats do you deliver in?',
+      question: 'How much do 3D product animation and rendering services cost?',
       answer:
-        'We typically deliver in MP4 (H.264) for videos and high-resolution PNG/JPG for stills. Other formats like MOV, ProRes, or transparent-background renders are available on request.',
+        'We offer custom quotes to match your budget and project goals—without compromising quality.',
     },
     {
       id: 8,
-      question: 'Can you handle large-scale projects or bulk renders?',
+      question: 'What revisions are included?',
       answer:
-        'Yes, we regularly work on bulk orders for 10+ animations or 50+ renders. We optimize workflows to maintain quality and meet tight deadlines.',
+        'We include multiple revision rounds during key stages (modeling, lighting, animation). This ensures the final result aligns perfectly with your expectations before delivery.',
     },
     {
       id: 9,
-      question: 'Do you offer creative direction or only technical execution?',
+      question: 'Where can I use the final 3D visuals?',
       answer:
-        'We do both. Our team can develop creative concepts, storyboards, and camera moves, or simply execute your pre-approved vision.',
+        'You can use them across: Websites & landing pages, Social media ads, Amazon & eCommerce listings, Product launches & presentations, TV, YouTube, and paid campaigns. We deliver files optimized for your intended platforms.',
     },
     {
       id: 10,
-      question: 'How do we get started?',
+      question: 'Why should I choose you over other 3D studios?',
       answer:
-        "Simply contact us with your project details, references, and timeline. We'll provide a proposal and next steps.",
-      links: [{ text: 'contact us', url: '/contact' }],
+        "We combine high-end realism, strong visual storytelling, fast communication, and business-focused results. Our priority isn’t just making things look good—it’s helping your product sell.",
     },
   ];
 

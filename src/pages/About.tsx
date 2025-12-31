@@ -1,11 +1,10 @@
-import { lazy, Suspense, useEffect } from 'react';
-import '../assets/css/sections/about.css';
+import { lazy, Suspense, useEffect } from "react";
+import "../assets/css/sections/about.css";
 
-const Header = lazy(() => import('../componets/Header'));
-const Footer = lazy(() => import('../componets/Footer'));
+const Header = lazy(() => import("../componets/Header"));
+const Footer = lazy(() => import("../componets/Footer"));
 
 const About = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -13,34 +12,34 @@ const About = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-1.jpg',
+      name: "Pranshu Gupta",
+      role: "Creative Director & Fx Artist",
+      image: "/images/about/Pranshu_Gupta-Creative_Director_and_Fx_Artist.JPG",
     },
     {
       id: 2,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-2.jpg',
+      name: "Pradeep Patidar",
+      role: "3D Animator Motion Graphic",
+      image: "/images/about/Pradeep_Patidar-3D_Animator-Motion_Graphic.JPG",
     },
     {
       id: 3,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-3.jpg',
+      name: "Satish Kumar",
+      role: "3D Animator",
+      image: "/images/about/Satish_Kumar-3d_Animator.JPG",
     },
     {
       id: 4,
-      name: 'John doe',
-      role: 'Founder & Creative Director',
-      image: '/images/team-4.jpg',
+      name: "Shantanu Manna",
+      role: "3D Modeller",
+      image: "/images/about/Shantanu_Manna-3D_Modeller.JPG",
     },
-    // {
-    //   id: 5,
-    //   name: 'John doe',
-    //   role: 'Founder & Creative Director',
-    //   image: '/images/team-5.jpg',
-    // },
+    {
+      id: 5,
+      name: "Liza",
+      role: "Fx Artist",
+      image: "/images/Liza-Fx Artist.png",
+    },
     // {
     //   id: 6,
     //   name: 'John doe',
@@ -79,41 +78,48 @@ const About = () => {
               <h2 className="story-heading">Our Story</h2>
               <div className="story-text">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                  facilisis, eros at placerat porta, augue mi viverra nunc, nec fringilla
-                  sapien nisl in magna. Donec porttitor, justo in egestas ullamcorper,
-                  neque libero volutpat mauris, sit amet aliquet nisl nulla non odio. Proin
-                  quis tortor lorem. Curabitur nec lacus vitae nunc malesuada feugiat. Nam
-                  sodales, nibh quis bibendum pulvinar, lectus sapien gravida enim, a
-                  ullamcorper urna orci sit amet arcu.
+                  RENDER DAC was built on a simple belief: great product visuals
+                  aren’t just seen — they’re experienced.{" "}
                 </p>
                 <p>
-                  Vivamus in magna non est dictum dictum non vel massa. Mauris posuere
-                  sapien at lectus tincidunt porta. Suspendisse a ex eu tortor vestibulum
-                  scelerisque sit amet in nulla. Etiam accumsan justo in tincidunt
-                  facilisis. Quisque volutpat turpis ut metus pharetra, ac viverra nunc
-                  elementum.
+                  We work closely with founders, startups, and global teams to
+                  transform products into high-impact 3D visuals that
+                  communicate value instantly. From photo-realistic renders to
+                  cinematic product animations, our focus is on clarity,
+                  precision, and visual storytelling that sells.
+                </p>
+                <p>
+                  Our process is hands-on and collaborative. We combine
+                  technical accuracy with creative lighting, materials, and
+                  motion to craft visuals that feel premium, believable, and
+                  purpose-driven — not generic.
                 </p>
               </div>
             </div>
 
             <div className="story-image">
-              <img src="/images/about-story.jpg" alt="Our Story" />
+              <img src="/images/about/Arnav_Gupta-Founder_CreativeDirector.PNG" alt="Our Story" />
             </div>
 
             <div className="story-quote">
               <p className="quote-text">
-                Design should feel like clarity not noise. At D2HMI, we don't just design
-                brands, we shape identities that speak without shouting, and last without
-                fading.
+                At RENDER DAC, we don’t just make things look good. We help
+                brands launch, explain, and elevate their products through
+                world-class 3D product animation and rendering.
               </p>
               <div className="quote-author">
                 <p className="author-name">Arnav Gupta</p>
                 <p className="author-role">Founder & Creative Director</p>
                 <div className="author-social">
-                  <a href="#" className="social-link">Instagram</a>
-                  <a href="#" className="social-link">LinkedIn</a>
-                  <a href="#" className="social-link">Youtube</a>
+                  <a href="https://www.instagram.com/therenderdac/" className="social-link">
+                    Instagram
+                  </a>
+                  <a href="https://www.linkedin.com/company/renderdac/?viewAsMember=true" className="social-link">
+                    LinkedIn
+                  </a>
+                  {/* <a href="#" className="social-link">
+                    YouTube
+                  </a> */}
                 </div>
               </div>
             </div>
