@@ -133,16 +133,16 @@ const Footer = () => {
             <h3 className="footer-heading">Legal</h3>
             <ul className="footer-links">
               <li>
-                <Link to="/privacy-policy">Privacy Policy</Link>
+                <Link to="">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/terms-services">Terms & Services</Link>
+                <Link to="">Terms & Services</Link>
               </li>
               <li>
-                <Link to="/terms-use">Terms of Use</Link>
+                <Link to="">Terms of Use</Link>
               </li>
               <li>
-                <Link to="/refund-policy">Refund Policy</Link>
+                <Link to="">Refund Policy</Link>
               </li>
             </ul>
           </div>

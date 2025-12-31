@@ -38,7 +38,7 @@ const About = () => {
       id: 5,
       name: "Liza",
       role: "Fx Artist",
-      image: "/images/Liza-Fx Artist.png",
+      image: "/images/about/Liza-Fx_Artist.png",
     },
     // {
     //   id: 6,

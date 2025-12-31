@@ -39,15 +39,46 @@
 /* Footer Content Grid */
 .footer-content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
+  text-align: center; /* ← CENTER TEXT */
 }
 
 /* Footer Columns */
 .footer-column {
   display: flex;
   flex-direction: column;
+  align-items: center; /* ← CENTER ITEMS */
+  gap: 1rem;
+}
+
+/* First Column (Logo + Description) */
+.footer-column .header-logo {
+  display: flex;
+  flex-direction: column; /* ← STACK LOGO VERTICALLY */
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-column .header-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.footer-column .header-logo:hover .header-logo-img {
+  transform: scale(1.05);
+}
+
+.footer-column .header-logo span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
 }
 
 .footer-heading {
@@ -55,13 +86,16 @@
   font-weight: 600;
   color: var(--color-text-primary);
   margin-bottom: 1.5rem;
+  text-align: center; /* ← CENTER HEADING */
 }
 
 .footer-subtitle {
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   color: var(--color-text-secondary);
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
+  line-height: 1.6;
+  text-align: center; /* ← CENTER SUBTITLE */
 }
 
 /* Contact List */
@@ -69,15 +103,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  align-items: center; /* ← CENTER CONTACT ITEMS */
+  width: 100%;
 }
 
 .footer-contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
   color: var(--color-text-secondary);
   transition: color 0.2s ease;
   line-height: 1.6;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  justify-content: center; /* ← CENTER CONTENT */
 }
 
 .footer-contact-item:hover {
@@ -86,8 +125,12 @@
 
 .footer-contact-item svg {
   flex-shrink: 0;
-  margin-top: 0.125rem;
   opacity: 0.7;
+}
+
+.footer-contact-icon {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Footer Links */
@@ -96,12 +139,20 @@
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
+  padding: 0;
+  margin: 0;
+  align-items: center; /* ← CENTER LINKS */
+}
+
+.footer-links li {
+  text-align: center; /* ← CENTER LIST ITEMS */
 }
 
 .footer-links a {
   color: var(--color-text-secondary);
   font-size: 0.9375rem;
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .footer-links a:hover {
@@ -172,11 +223,30 @@
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .footer-bottom p {
   color: var(--color-text-secondary);
   font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-credit {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-credit a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-credit a:hover {
+  color: #ffffff;
 }
 
 /* ========================================
@@ -211,6 +281,11 @@
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-column {
+    align-items: center;
   }
 
   .footer-column:first-child {
@@ -219,6 +294,10 @@
 
   .footer-newsletter {
     grid-column: 1 / -1;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
   }
 }
 
@@ -242,7 +321,12 @@
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-column {
+    align-items: center;
   }
 
   .footer-column:first-child {
@@ -251,6 +335,28 @@
 
   .footer-heading {
     font-size: 1rem;
+  }
+
+  .footer-column .header-logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer-column .header-logo span {
+    font-size: 1.125rem;
+  }
+
+  .footer-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .footer-contact-item {
+    font-size: 0.875rem;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
   }
 
   .newsletter-input-wrapper {
