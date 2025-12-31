@@ -6,7 +6,6 @@ import {
   MapPin,
   Linkedin,
   Instagram,
-  MessageCircle,
 } from "lucide-react";
 
 const Header = lazy(() => import("../componets/Header"));
