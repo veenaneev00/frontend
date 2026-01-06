@@ -312,7 +312,7 @@
 
 .modal-video-card {
   position: relative;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 9 / 16; /* Vertical video aspect ratio */
   border-radius: 12px;
   overflow: hidden;
   background: #000000;
@@ -331,11 +331,11 @@
 }
 
 /* ========================================
-   YOUTUBE CLEAN EMBED
+   EMBED WRAPPER & CLEAN OVERLAYS
    ======================================== */
 
-/* YouTube Embed Wrapper */
-.youtube-embed-wrapper {
+/* Embed wrapper for YouTube/Instagram */
+.embed-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -351,7 +351,7 @@
   border: none;
 }
 
-/* YouTube Overlay - Hides title and branding */
+/* YouTube Overlay - Hides controls and branding */
 .youtube-overlay {
   position: absolute;
   top: 0;
@@ -362,7 +362,6 @@
   z-index: 5;
 }
 
-/* Hide top title bar */
 .youtube-overlay::before {
   content: "";
   position: absolute;
@@ -372,13 +371,12 @@
   height: 80px;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.95) 50%,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
     transparent 100%
   );
 }
 
-/* Hide bottom title and some controls */
 .youtube-overlay::after {
   content: "";
   position: absolute;
@@ -388,37 +386,52 @@
   height: 100px;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.9) 40%,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.7) 30%,
     transparent 100%
   );
 }
 
-/* Hide YouTube logo in top-right */
-.youtube-embed-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 140px;
-  height: 70px;
-  background: #000;
-  z-index: 6;
-  pointer-events: none;
+/* Instagram Wrapper */
+.instagram-wrapper {
+  overflow: hidden;
 }
 
-/* Hide "Watch on YouTube" in bottom-right */
-.youtube-embed-wrapper::after {
-  content: "";
+.instagram-iframe {
+  transform: scale(1.2);
+  transform-origin: center center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Instagram Overlay - Hides header and button */
+.instagram-overlay {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 110px;
-  height: 55px;
-  background: #000;
-  border-radius: 4px;
-  z-index: 6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  z-index: 5;
+}
+
+.instagram-overlay-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #000;
+}
+
+.instagram-overlay-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 110px;
+  height: 40px;
+  background: #000;
+  border-radius: 8px;
 }
 
 /* Video Title Overlay */
@@ -473,8 +486,8 @@
   transform: translateX(-50%) scale(1.05);
 }
 
-/* Hide play button for YouTube embeds */
-.youtube-embed-wrapper ~ .modal-video-play-btn {
+/* Hide play button for embedded videos */
+.embed-wrapper ~ .modal-video-play-btn {
   display: none;
 }
 
@@ -568,14 +581,8 @@
     height: 80px;
   }
 
-  .youtube-embed-wrapper::before {
-    width: 120px;
+  .instagram-overlay-top {
     height: 60px;
-  }
-
-  .youtube-embed-wrapper::after {
-    width: 100px;
-    height: 50px;
   }
 
   .modal-video-title {

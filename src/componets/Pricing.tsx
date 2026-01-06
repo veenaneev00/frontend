@@ -12,7 +12,7 @@ interface PricingPlan {
   highlightedFeatures?: string[];
   examples: {
     title: string;
-    type: "youtube" | "local";
+    type: "youtube" | "instagram" | "local";
     video: string;
     poster?: string;
   }[];
@@ -44,9 +44,14 @@ const Pricing = () => {
           video: "kJ84gnI9AIA",
         },
         {
+          title: "Instagram Reel Example",
+          type: "instagram",
+          video: "DRPO-8PEplD",
+        },
+        {
           title: "Perfume 3D Animation Video",
           type: "local",
-          video: "/videos/example-startup-1.mp4",
+          video: '/videos/hero-section/HeroSec-3.MP4',
           poster: "/images/example-startup-1.jpg",
         },
         {
@@ -85,12 +90,6 @@ const Pricing = () => {
           video: "/videos/example-startup-7.mp4",
           poster: "/images/example-startup-7.jpg",
         },
-        {
-          title: "3D Product Animation",
-          type: "local",
-          video: "/videos/example-startup-8.mp4",
-          poster: "/images/example-startup-8.jpg",
-        },
       ],
     },
     {
@@ -111,6 +110,11 @@ const Pricing = () => {
           title: "YouTube Example",
           type: "youtube",
           video: "kJ84gnI9AIA",
+        },
+        {
+          title: "Instagram Example",
+          type: "instagram",
+          video: "DRPO-8PEplD",
         },
         {
           title: "Pro Example 1",
@@ -136,12 +140,6 @@ const Pricing = () => {
           video: "/videos/example-pro-4.mp4",
           poster: "/images/example-pro-4.jpg",
         },
-        {
-          title: "Pro Example 5",
-          type: "local",
-          video: "/videos/example-pro-5.mp4",
-          poster: "/images/example-pro-5.jpg",
-        },
       ],
     },
     {
@@ -162,6 +160,11 @@ const Pricing = () => {
           title: "YouTube Showcase",
           type: "youtube",
           video: "kJ84gnI9AIA",
+        },
+        {
+          title: "Instagram Showcase",
+          type: "instagram",
+          video: "DRPO-8PEplD",
         },
         {
           title: "Premium Example 1",
@@ -186,12 +189,6 @@ const Pricing = () => {
           type: "local",
           video: "/videos/example-premium-4.mp4",
           poster: "/images/example-premium-4.jpg",
-        },
-        {
-          title: "Premium Example 5",
-          type: "local",
-          video: "/videos/example-premium-5.mp4",
-          poster: "/images/example-premium-5.jpg",
         },
       ],
     },
@@ -364,15 +361,32 @@ const Pricing = () => {
                       <div className="modal-video-container">
                         {/* YouTube Embed - Clean Version */}
                         {example.type === "youtube" && (
-                          <div className="youtube-embed-wrapper">
+                          <div className="embed-wrapper">
                             <iframe
                               className="modal-video modal-iframe"
-                              src={`https://www.youtube.com/embed/${example.video}?controls=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&iv_load_policy=3&fs=1`}
+                              src={`https://www.youtube.com/embed/${example.video}?controls=0&modestbranding=1&playsinline=1&rel=0&showinfo=0&iv_load_policy=3`}
                               title={example.title}
-                              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
                             />
                             <div className="youtube-overlay"></div>
+                          </div>
+                        )}
+
+                        {/* Instagram Embed - Clean Version */}
+                        {example.type === "instagram" && (
+                          <div className="embed-wrapper instagram-wrapper">
+                            <iframe
+                              className="modal-video modal-iframe instagram-iframe"
+                              src={`https://www.instagram.com/p/${example.video}/embed/captioned/`}
+                              title={example.title}
+                              allowFullScreen
+                              scrolling="no"
+                            />
+                            <div className="instagram-overlay">
+                              <div className="instagram-overlay-top"></div>
+                              <div className="instagram-overlay-button"></div>
+                            </div>
                           </div>
                         )}
 

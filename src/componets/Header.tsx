@@ -125,6 +125,14 @@ const Header = () => {
                     </span>
                   </div>
                 </a>
+
+                <a href="#service-3" className="dropdown-item">
+                  <div className="dropdown-item-content">
+                    <span className="dropdown-item-title">
+                      3D Product Modelling
+                    </span>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -244,6 +252,14 @@ const Header = () => {
               >
                 <Box size={16} className="sidebar-submenu-icon" />
                 3D Product Rendering
+              </a>
+              <a
+                href="#service-3"
+                className="sidebar-submenu-link"
+                onClick={toggleSidebar}
+              >
+                <Box size={16} className="sidebar-submenu-icon" />
+                3D Product Modelling
               </a>
             </div>
           </div>

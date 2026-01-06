@@ -42,36 +42,36 @@ const FAQ = () => {
       answer:
         'Timelines depend on complexity: Still renders: 2–5 days, Short animations (5–10 sec): 7–14 days, Advanced or luxury animations: 2–4 weeks. We always provide a clear timeline before starting.',
     },
-    {
-      id: 6,
-      question: "Can you work with products that are not manufactured yet?",
-      answer:
-        "Yes. Many of our clients use 3D visuals before production for marketing, pitching, or pre-launch campaigns. As long as we have dimensions or references, we can create accurate visuals.",
-    },
-    {
-      id: 7,
-      question: 'How much do 3D product animation and rendering services cost?',
-      answer:
-        'We offer custom quotes to match your budget and project goals—without compromising quality.',
-    },
-    {
-      id: 8,
-      question: 'What revisions are included?',
-      answer:
-        'We include multiple revision rounds during key stages (modeling, lighting, animation). This ensures the final result aligns perfectly with your expectations before delivery.',
-    },
-    {
-      id: 9,
-      question: 'Where can I use the final 3D visuals?',
-      answer:
-        'You can use them across: Websites & landing pages, Social media ads, Amazon & eCommerce listings, Product launches & presentations, TV, YouTube, and paid campaigns. We deliver files optimized for your intended platforms.',
-    },
-    {
-      id: 10,
-      question: 'Why should I choose you over other 3D studios?',
-      answer:
-        "We combine high-end realism, strong visual storytelling, fast communication, and business-focused results. Our priority isn’t just making things look good—it’s helping your product sell.",
-    },
+    // {
+    //   id: 6,
+    //   question: "Can you work with products that are not manufactured yet?",
+    //   answer:
+    //     "Yes. Many of our clients use 3D visuals before production for marketing, pitching, or pre-launch campaigns. As long as we have dimensions or references, we can create accurate visuals.",
+    // },
+    // {
+    //   id: 7,
+    //   question: 'How much do 3D product animation and rendering services cost?',
+    //   answer:
+    //     'We offer custom quotes to match your budget and project goals—without compromising quality.',
+    // },
+    // {
+    //   id: 8,
+    //   question: 'What revisions are included?',
+    //   answer:
+    //     'We include multiple revision rounds during key stages (modeling, lighting, animation). This ensures the final result aligns perfectly with your expectations before delivery.',
+    // },
+    // {
+    //   id: 9,
+    //   question: 'Where can I use the final 3D visuals?',
+    //   answer:
+    //     'You can use them across: Websites & landing pages, Social media ads, Amazon & eCommerce listings, Product launches & presentations, TV, YouTube, and paid campaigns. We deliver files optimized for your intended platforms.',
+    // },
+    // {
+    //   id: 10,
+    //   question: 'Why should I choose you over other 3D studios?',
+    //   answer:
+    //     "We combine high-end realism, strong visual storytelling, fast communication, and business-focused results. Our priority isn’t just making things look good—it’s helping your product sell.",
+    // },
   ];
 
   const toggleFAQ = (id: number) => {
