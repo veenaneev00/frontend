@@ -548,7 +548,7 @@ const Contact = () => {
                 <div className="form-group-full">
                   <label className="form-label">Select Service?</label>
                   <div className="radio-group">
-                    {["3D Product Animation", "3d Product Render", "Both"].map(
+                    {["3D Product Animation", "3d Product Render", "3d Product Modelling"].map(
                       (subject, index) => (
                         <label key={index} className="radio-label">
                           <input
