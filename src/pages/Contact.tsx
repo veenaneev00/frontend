@@ -342,7 +342,7 @@ const Contact = () => {
 
                   {/* Address – India */}
                   <a
-                    href="https://maps.google.com/?q=Delhi+110006+India"
+                    // href="https://maps.google.com/?q=Delhi+110006+India"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="contact-info-item"
@@ -350,12 +350,12 @@ const Contact = () => {
                     <div className="contact-info-icon">
                       <MapPin size={24} />
                     </div>
-                    <span>Delhi 110006, India</span>
+                    <span>Delhi, India</span>
                   </a>
 
                   {/* Address – UK */}
                   <a
-                    href="https://maps.google.com/?q=20+Wenlock+Road+London+N1+7GU+United+Kingdom"
+                    // href="https://maps.google.com/?q=20+Wenlock+Road+London+N1+7GU+United+Kingdom"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="contact-info-item"
@@ -364,9 +364,7 @@ const Contact = () => {
                       <MapPin size={24} />
                     </div>
                     <span>
-                      20 Wenlock Road, London N1 7GU,
-                      <br />
-                      United Kingdom
+                      London, United Kingdom
                     </span>
                   </a>
                 </div>

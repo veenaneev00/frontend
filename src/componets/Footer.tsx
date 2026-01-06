@@ -74,23 +74,23 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://maps.google.com/?q=Delhi+110006+India"
+                // href="https://maps.google.com/?q=Delhi+110006+India"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-contact-item"
               >
                 <MapPin size={20} className="footer-contact-icon" />
-                <span>Delhi 110006, India</span>
+                <span>Delhi, India</span>
               </a>
 
               <a
-                href="https://maps.google.com/?q=20+Wenlock+Road+London+N1+7GU+United+Kingdom"
+                // href="https://maps.google.com/?q=20+Wenlock+Road+London+N1+7GU+United+Kingdom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-contact-item"
               >
                 <MapPin size={20} className="footer-contact-icon" />
-                <span>20 Wenlock Road, London N1 7GU, United Kingdom</span>
+                <span>London, United Kingdom</span>
               </a>
             </div>
           </div>
