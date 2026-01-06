@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import '../assets/css/sections/hero.css';
 
 const Hero = () => {
@@ -26,8 +27,8 @@ const Hero = () => {
       id: 1,
       badge: 'RESULTS',
       badgeClass: 'card-badge-results',
-      // title: 'Conversions',
-      // description: 'Turn clicks into paying customers.',
+      title: 'Conversions',
+      description: 'Turn clicks into paying customers.',
       video: '/videos/hero-section/HeroSec-1.MOV',
       videoWebm: '/videos/card-conversions.webm',
       // poster: '/images/card-conversions-poster.jpg',
@@ -36,8 +37,8 @@ const Hero = () => {
       id: 2,
       badge: 'SPEED',
       badgeClass: 'card-badge-speed',
-      // title: 'Speed',
-      // description: 'Launch in days, not weeks.',
+      title: 'Speed',
+      description: 'Launch in days, not weeks.',
       video: '/videos/hero-section/HeroSec-2.MOV',
       videoWebm: '/videos/card-speed.webm',
       // poster: '/images/card-speed-poster.jpg',
@@ -46,8 +47,8 @@ const Hero = () => {
       id: 3,
       badge: 'SOCIAL',
       badgeClass: 'card-badge-social',
-      // title: 'Social-Ready',
-      // description: 'Made for IG, TikTok, and Meta.',
+      title: 'Social-Ready',
+      description: 'Made for IG, TikTok, and Meta.',
       video: '/videos/hero-section/HeroSec-3.MP4',
       videoWebm: '/videos/card-social.webm',
       // poster: '/images/card-social-poster.jpg',
@@ -56,8 +57,8 @@ const Hero = () => {
       id: 4,
       badge: 'STANDOUT',
       badgeClass: 'card-badge-standout',
-      // title: 'Standout',
-      // description: 'Be the product no one scrolls past.',
+      title: 'Standout',
+      description: 'Be the product no one scrolls past.',
       video: '/videos/hero-section/HeroSec-4.mp4',
       videoWebm: '/videos/card-standout.webm',
       // poster: '/images/card-standout-poster.jpg',
@@ -66,8 +67,8 @@ const Hero = () => {
       id: 5,
       badge: 'PREMIUM',
       badgeClass: 'card-badge-premium',
-      // title: 'Premium',
-      // description: 'Look like the industry leader.',
+      title: 'Premium',
+      description: 'Look like the industry leader.',
       video: '/videos/hero-section/HeroSec-5.mp4',
       videoWebm: '/videos/card-premium.webm',
       // poster: '/images/card-premium-poster.jpg',
@@ -80,6 +81,9 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-container">
+        <br/>
+        <br/>
+        
         {/* Hero Header */}
         <div className="hero-header">
           <div className="hero-logo">
@@ -90,7 +94,7 @@ const Hero = () => {
               width="32"
               height="32"
             />
-            <span>RENDER DAC Studios</span>
+            <span>RD Studios</span>
           </div>
 
 {/* 3D Art, Product Design, Animation, Visualization. Turn your idea into reality. */}
@@ -103,9 +107,9 @@ const Hero = () => {
             Bring your ideas to life.
           </h6>
 
-          <a href="/contact" className="hero-cta">
-            Chat With Us
-          </a>
+          <Link to="/contact" className="hero-cta">
+              Contact Now
+            </Link>
         </div>
 
         {/* Product Cards Grid */}
@@ -126,8 +130,8 @@ const Hero = () => {
               </div>
               <span className={`card-badge ${card.badgeClass}`}>{card.badge}</span>
               <div className="card-content">
-                {/* <h3 className="card-title">{card.title}</h3> */}
-                {/* <p className="card-description">{card.description}</p> */}
+                <h3 className="card-title">{card.title}</h3>
+                <p className="card-description">{card.description}</p>
               </div>
             </div>
           ))}

@@ -59,6 +59,8 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .pricing-contact-btn:hover {
@@ -89,7 +91,7 @@
 }
 
 .pricing-card-featured {
-  background: #0a0a0a;  
+  background: #0a0a0a;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -237,8 +239,12 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -306,7 +312,7 @@
 
 .modal-video-card {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   border-radius: 12px;
   overflow: hidden;
   background: #000000;
@@ -324,10 +330,129 @@
   object-fit: cover;
 }
 
+/* ========================================
+   YOUTUBE CLEAN EMBED
+   ======================================== */
+
+/* YouTube Embed Wrapper */
+.youtube-embed-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* iframe styling */
+.modal-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* YouTube Overlay - Hides title and branding */
+.youtube-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Hide top title bar */
+.youtube-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.95) 50%,
+    transparent 100%
+  );
+}
+
+/* Hide bottom title and some controls */
+.youtube-overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9) 40%,
+    transparent 100%
+  );
+}
+
+/* Hide YouTube logo in top-right */
+.youtube-embed-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 70px;
+  background: #000;
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* Hide "Watch on YouTube" in bottom-right */
+.youtube-embed-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 110px;
+  height: 55px;
+  background: #000;
+  border-radius: 4px;
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* Video Title Overlay */
+.modal-video-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    transparent 100%
+  );
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.modal-video-title span {
+  display: block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Play/Pause Button (only for local videos) */
 .modal-video-play-btn {
   position: absolute;
   bottom: 1rem;
-  left: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -344,8 +469,13 @@
 }
 
 .modal-video-play-btn:hover {
-  background: #ffffff;
-  transform: scale(1.05);
+  background: #e5e5e5;
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Hide play button for YouTube embeds */
+.youtube-embed-wrapper ~ .modal-video-play-btn {
+  display: none;
 }
 
 .modal-video-info {
@@ -428,5 +558,28 @@
   .modal-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .youtube-overlay::before {
+    height: 60px;
+  }
+
+  .youtube-overlay::after {
+    height: 80px;
+  }
+
+  .youtube-embed-wrapper::before {
+    width: 120px;
+    height: 60px;
+  }
+
+  .youtube-embed-wrapper::after {
+    width: 100px;
+    height: 50px;
+  }
+
+  .modal-video-title {
+    font-size: 0.8125rem;
+    padding: 0.75rem;
   }
 }

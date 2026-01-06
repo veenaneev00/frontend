@@ -12,8 +12,9 @@ interface PricingPlan {
   highlightedFeatures?: string[];
   examples: {
     title: string;
+    type: "youtube" | "local";
     video: string;
-    poster: string;
+    poster?: string;
   }[];
 }
 
@@ -38,49 +39,57 @@ const Pricing = () => {
       ],
       examples: [
         {
+          title: "YouTube Shorts Example",
+          type: "youtube",
+          video: "kJ84gnI9AIA",
+        },
+        {
           title: "Perfume 3D Animation Video",
+          type: "local",
           video: "/videos/example-startup-1.mp4",
           poster: "/images/example-startup-1.jpg",
         },
         {
           title: "SERUM | 3d Product Animation Video",
+          type: "local",
           video: "/videos/example-startup-2.mp4",
           poster: "/images/example-startup-2.jpg",
         },
         {
           title: "Sneaker 3D Animation Video",
+          type: "local",
           video: "/videos/example-startup-3.mp4",
           poster: "/images/example-startup-3.jpg",
         },
         {
           title: "CGI Product VFX Campaign",
+          type: "local",
           video: "/videos/example-startup-4.mp4",
           poster: "/images/example-startup-4.jpg",
         },
         {
           title: "Cosmetics - 3D Product Animation",
+          type: "local",
           video: "/videos/example-startup-5.mp4",
           poster: "/images/example-startup-5.jpg",
         },
         {
           title: "Smart Watch - 3D product animation",
+          type: "local",
           video: "/videos/example-startup-6.mp4",
           poster: "/images/example-startup-6.jpg",
         },
         {
           title: "Cosmetics- 3D Product Animation",
+          type: "local",
           video: "/videos/example-startup-7.mp4",
           poster: "/images/example-startup-7.jpg",
         },
         {
           title: "3D Product Animation",
+          type: "local",
           video: "/videos/example-startup-8.mp4",
           poster: "/images/example-startup-8.jpg",
-        },
-        {
-          title: "CGI Lunch Box - 3D Product Animation",
-          video: "/videos/example-startup-9.mp4",
-          poster: "/images/example-startup-9.jpg",
         },
       ],
     },
@@ -99,34 +108,39 @@ const Pricing = () => {
       ],
       examples: [
         {
+          title: "YouTube Example",
+          type: "youtube",
+          video: "kJ84gnI9AIA",
+        },
+        {
           title: "Pro Example 1",
+          type: "local",
           video: "/videos/example-pro-1.mp4",
           poster: "/images/example-pro-1.jpg",
         },
         {
           title: "Pro Example 2",
+          type: "local",
           video: "/videos/example-pro-2.mp4",
           poster: "/images/example-pro-2.jpg",
         },
         {
           title: "Pro Example 3",
+          type: "local",
           video: "/videos/example-pro-3.mp4",
           poster: "/images/example-pro-3.jpg",
         },
         {
           title: "Pro Example 4",
+          type: "local",
           video: "/videos/example-pro-4.mp4",
           poster: "/images/example-pro-4.jpg",
         },
         {
           title: "Pro Example 5",
+          type: "local",
           video: "/videos/example-pro-5.mp4",
           poster: "/images/example-pro-5.jpg",
-        },
-        {
-          title: "Pro Example 6",
-          video: "/videos/example-pro-6.mp4",
-          poster: "/images/example-pro-6.jpg",
         },
       ],
     },
@@ -145,34 +159,39 @@ const Pricing = () => {
       ],
       examples: [
         {
+          title: "YouTube Showcase",
+          type: "youtube",
+          video: "kJ84gnI9AIA",
+        },
+        {
           title: "Premium Example 1",
+          type: "local",
           video: "/videos/example-premium-1.mp4",
           poster: "/images/example-premium-1.jpg",
         },
         {
           title: "Premium Example 2",
+          type: "local",
           video: "/videos/example-premium-2.mp4",
           poster: "/images/example-premium-2.jpg",
         },
         {
           title: "Premium Example 3",
+          type: "local",
           video: "/videos/example-premium-3.mp4",
           poster: "/images/example-premium-3.jpg",
         },
         {
           title: "Premium Example 4",
+          type: "local",
           video: "/videos/example-premium-4.mp4",
           poster: "/images/example-premium-4.jpg",
         },
         {
           title: "Premium Example 5",
+          type: "local",
           video: "/videos/example-premium-5.mp4",
           poster: "/images/example-premium-5.jpg",
-        },
-        {
-          title: "Premium Example 6",
-          video: "/videos/example-premium-6.mp4",
-          poster: "/images/example-premium-6.jpg",
         },
       ],
     },
@@ -216,7 +235,6 @@ const Pricing = () => {
         <div className="pricing-container">
           {/* Header */}
           <div className="pricing-header">
-            {/* <div className="pricing-badge">Our Pricing and Packages</div> */}
             <h2 className="pricing-title">Our Pricing.</h2>
             <p className="pricing-subtitle">
               No hidden fees. Just world-class animation that fits your budget.
@@ -239,7 +257,6 @@ const Pricing = () => {
                   </div>
                 </div>
 
-                {/* Always show View Example button */}
                 <button
                   className="pricing-view-example-btn"
                   onClick={() => openModal(plan.id)}
@@ -307,7 +324,9 @@ const Pricing = () => {
 
           {/* Contact Button */}
           <div className="pricing-footer">
-            <Link to="/contact" className="pricing-contact-btn">Contact Now</Link>
+            <Link to="/contact" className="pricing-contact-btn">
+              Contact Now
+            </Link>
           </div>
         </div>
       </section>
@@ -343,61 +362,79 @@ const Pricing = () => {
                   return (
                     <div key={index} className="modal-video-card">
                       <div className="modal-video-container">
-                        <video
-                          id={videoId}
-                          className="modal-video"
-                          poster={example.poster}
-                          loop
-                          playsInline
-                        >
-                          <source src={example.video} type="video/mp4" />
-                        </video>
+                        {/* YouTube Embed - Clean Version */}
+                        {example.type === "youtube" && (
+                          <div className="youtube-embed-wrapper">
+                            <iframe
+                              className="modal-video modal-iframe"
+                              src={`https://www.youtube.com/embed/${example.video}?controls=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&iv_load_policy=3&fs=1`}
+                              title={example.title}
+                              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                              allowFullScreen
+                            />
+                            <div className="youtube-overlay"></div>
+                          </div>
+                        )}
 
-                        <button
-                          className="modal-video-play-btn"
-                          onClick={() => toggleVideo(videoId)}
-                        >
-                          {isPlaying ? (
-                            // Pause Icon
-                            <svg
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
+                        {/* Local Video */}
+                        {example.type === "local" && (
+                          <>
+                            <video
+                              id={videoId}
+                              className="modal-video"
+                              poster={example.poster}
+                              loop
+                              playsInline
+                              preload="none"
                             >
-                              <rect
-                                x="4"
-                                y="3"
-                                width="3"
-                                height="10"
-                                fill="currentColor"
-                                rx="1"
-                              />
-                              <rect
-                                x="9"
-                                y="3"
-                                width="3"
-                                height="10"
-                                fill="currentColor"
-                                rx="1"
-                              />
-                            </svg>
-                          ) : (
-                            // Play Icon
-                            <svg
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
+                              <source src={example.video} type="video/mp4" />
+                            </video>
+
+                            <button
+                              className="modal-video-play-btn"
+                              onClick={() => toggleVideo(videoId)}
                             >
-                              <path
-                                d="M5 3.5v9l7-4.5-7-4.5z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          )}
-                          <span>{isPlaying ? "Pause" : "Play"}</span>
-                        </button>
+                              {isPlaying ? (
+                                <svg
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <rect
+                                    x="4"
+                                    y="3"
+                                    width="3"
+                                    height="10"
+                                    fill="currentColor"
+                                    rx="1"
+                                  />
+                                  <rect
+                                    x="9"
+                                    y="3"
+                                    width="3"
+                                    height="10"
+                                    fill="currentColor"
+                                    rx="1"
+                                  />
+                                </svg>
+                              ) : (
+                                <svg
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M5 3.5v9l7-4.5-7-4.5z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              )}
+                              <span>{isPlaying ? "Pause" : "Play"}</span>
+                            </button>
+                          </>
+                        )}
 
                         <div className="modal-video-title">
                           <span>{example.title}</span>
