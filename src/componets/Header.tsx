@@ -76,9 +76,17 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="header-nav">
-            <Link to="/" className="nav-link">
+            {/* <Link to="/" className="nav-link">
               Home
-            </Link>
+            </Link> */}
+
+            <a
+              href="#hero"
+              className="nav-link"
+              onClick={(e) => handleSectionClick("hero", e)}
+            >
+              Home
+            </a>
 
             <div
               className="nav-item-dropdown"

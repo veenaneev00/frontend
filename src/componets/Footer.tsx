@@ -100,7 +100,12 @@ const Footer = () => {
             <h3 className="footer-heading">Company</h3>
             <ul className="footer-links">
               <li>
-                <Link to="/">Home</Link>
+                <a
+                  href="#hero"
+                  onClick={(e) => handleSectionClick("hero", e)}
+                >
+                  Home
+                </a>
               </li>
               <li>
                 <a

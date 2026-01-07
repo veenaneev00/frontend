@@ -29,7 +29,7 @@ const Hero = () => {
       badgeClass: 'card-badge-results',
       title: 'Conversions',
       description: 'Turn clicks into paying customers.',
-      video: '/videos/hero-section/HeroSec-1.MOV',
+      video: '/videos/hero-section/HeroSec-3.MP4',
       videoWebm: '/videos/card-conversions.webm',
       // poster: '/images/card-conversions-poster.jpg',
     },
@@ -39,7 +39,7 @@ const Hero = () => {
       badgeClass: 'card-badge-speed',
       title: 'Speed',
       description: 'Launch in days, not weeks.',
-      video: '/videos/hero-section/HeroSec-2.MOV',
+      video: '/videos/hero-section/HeroSec-3.MP4',
       videoWebm: '/videos/card-speed.webm',
       // poster: '/images/card-speed-poster.jpg',
     },
@@ -79,7 +79,7 @@ const Hero = () => {
   const cardsToShow = isMobile ? allCards.slice(0, 3) : allCards;
 
   return (
-    <section className="hero">
+    <section className="hero" id='hero'>
       <div className="hero-container">
         <br/>
         <br/>
