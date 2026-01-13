@@ -51,7 +51,7 @@ const Pricing = () => {
         {
           title: "Perfume 3D Animation Video",
           type: "local",
-          video: '/videos/hero-section/HeroSec-3.MP4',
+          video: "/videos/hero-section/HeroSec-3.MP4",
           poster: "images/project/Project-3.png",
         },
         // {
@@ -374,7 +374,7 @@ const Pricing = () => {
                         )}
 
                         {/* Instagram Embed - Clean Version */}
-                        {example.type === "instagram" && (
+                        {/* {example.type === "instagram" && (
                           <div className="embed-wrapper instagram-wrapper">
                             <iframe
                               className="modal-video modal-iframe instagram-iframe"
@@ -386,6 +386,24 @@ const Pricing = () => {
                             <div className="instagram-overlay">
                               <div className="instagram-overlay-top"></div>
                               <div className="instagram-overlay-button"></div>
+                            </div>
+                          </div>
+                        )} */}
+                        {example.type === "instagram" && (
+                          <div className="instagram-clean-wrapper">
+                            <iframe
+                              className="modal-video modal-iframe instagram-clean-iframe"
+                              src={`https://www.instagram.com/p/${example.video}/embed/captioned/`}
+                              title={example.title}
+                              allowFullScreen
+                              scrolling="no"
+                              frameBorder="0"
+                            />
+                            <div className="instagram-clean-overlay">
+                              <div className="instagram-top-cover"></div>
+                              <div className="instagram-bottom-cover"></div>
+                              <div className="instagram-button-cover"></div>
+                              <div className="instagram-text-cover"></div>
                             </div>
                           </div>
                         )}

@@ -405,7 +405,7 @@
 }
 
 /* Instagram Overlay - Hides header and button */
-.instagram-overlay {
+/* .instagram-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -432,8 +432,91 @@
   height: 40px;
   background: #000;
   border-radius: 8px;
+} */
+.instagram-clean-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
 }
 
+.instagram-clean-iframe {
+  position: absolute;
+  top: -100px; /* Crop top */
+  left: -50px; /* Crop sides */
+  width: calc(100% + 100px);
+  height: calc(100% + 200px);
+  border: none;
+  transform: scale(1.4);
+  transform-origin: center center;
+}
+
+.instagram-clean-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Top cover - larger */
+.instagram-top-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: #000;
+  z-index: 11;
+}
+
+/* Bottom cover - larger */
+.instagram-bottom-cover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: #000;
+  z-index: 11;
+}
+
+/* Complete side covers */
+.instagram-clean-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: #000;
+  z-index: 11;
+}
+
+.instagram-clean-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background: #000;
+  z-index: 11;
+}
+
+/* Center video area gradient */
+.instagram-text-cover {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  right: 50px;
+  bottom: 200px;
+  pointer-events: none;
+  z-index: 5;
+}
 /* Video Title Overlay */
 .modal-video-title {
   position: absolute;
